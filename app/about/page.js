@@ -41,7 +41,6 @@ export default function Page() {
           src={aboutImage1}
           alt="Family sitting around a fire pit in front of cabin"
           placeholder="blur"
-          quality={80}
         />
       </div>
 
@@ -50,7 +49,6 @@ export default function Page() {
           src={aboutImage2}
           alt="Family that manages The Wild Oasis"
           placeholder="blur"
-          quality={80}
         />
       </div>
 

@@ -1,4 +1,5 @@
 import { eachDayOfInterval } from 'date-fns';
+import { supabase } from '../_lib/supabase';
 
 /////////////
 // GET
@@ -139,9 +140,12 @@ export async function getCountries() {
     const res = await fetch(
       'https://restcountries.com/v2/all?fields=name,flag'
     );
+     if (!res.ok) {
+       throw new Error(`Request failed: ${res.status}`);
+     }
     const countries = await res.json();
     return countries;
-  } catch {
+  } catch(err) {
     throw new Error('Could not fetch countries');
   }
 }
