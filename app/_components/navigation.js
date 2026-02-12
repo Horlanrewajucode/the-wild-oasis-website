@@ -28,8 +28,8 @@ export default async function Navigation() {
               href="/account"
               className="hover:text-accent-400 transition-colors flex items-center justify-center gap-4"
             >
-              <img className="h-8 rounded-full" src={session.user.image} alt={session.user.name} referrerPolicy="no-referrer"/>
               <span>Guest area</span>
+              <img className="h-8 rounded-full" src={session.user.image} alt={session.user.name} referrerPolicy="no-referrer"/>
             </Link>
           ) : (
             <Link
